@@ -1,7 +1,6 @@
-package com.ArrayList;
+package com.collection.other;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
@@ -10,7 +9,7 @@ import java.util.ListIterator;
  * @Date:2019/1/22 9:18
  * @Description:不负自己
  */
-public class Tset2 {
+public class Test2 {
     public static void main(String [] args){
 //        先创建一个集合
         List li =new ArrayList();
