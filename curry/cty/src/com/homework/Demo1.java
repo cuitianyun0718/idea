@@ -1,5 +1,7 @@
 package com.homework;
 
+import org.junit.Test;
+
 import java.util.Scanner;
 
 public class Demo1 {
@@ -14,6 +16,44 @@ public class Demo1 {
             System.out.println("该年份是平年");
         }
 
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @Test
+    public void test1(){
+        Scanner sc=new Scanner(System.in);
+//
+        int x=2016;
+        if(x%4==0&&x%100!=0||x%400==0){
+            System.out.println("该年份是闰年");
+        }
+        else {
+            System.out.println("年份是平年");
+        }
 
     }
 }

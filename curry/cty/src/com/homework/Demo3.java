@@ -18,18 +18,18 @@ public class Demo3 {
             if(j==2){
                 System.out.println(i+"年"+j+"月有29天！");
             }else if(j==1||j==3||j==5||j==7||j==8||j==10||j==12){
-                System.out.println(i+"年"+j+"月有30天！");
-            }else{
                 System.out.println(i+"年"+j+"月有31天！");
+            }else{
+                System.out.println(i+"年"+j+"月有30天！");
             }
 
         }else {
             if (j == 2) {
                 System.out.println(i + "年" + j + "月有28天！");
             } else if (j==1||j==3||j==5||j==7||j==8||j==10||j==12) {
-                System.out.println(i + "年" + j + "月有30天！");
-            } else {
                 System.out.println(i + "年" + j + "月有31天！");
+            } else {
+                System.out.println(i + "年" + j + "月有30天！");
             }
 
         }
@@ -65,7 +65,7 @@ public class Demo3 {
                 break;
             }
 
-                dafault:
+//                dafault:
                 System.out.println("输入错误");
                 break;
         }

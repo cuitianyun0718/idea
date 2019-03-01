@@ -8,6 +8,7 @@ package com.homework;
 public class Demo20 {
     public static void main(String[] args) {
 
+
     }
     public static void max_min(int m, int n) {
 

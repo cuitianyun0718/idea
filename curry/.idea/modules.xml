@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Xiaopu/Xiaopu.iml" filepath="$PROJECT_DIR$/Xiaopu/Xiaopu.iml" />
       <module fileurl="file://$PROJECT_DIR$/cty/cty.iml" filepath="$PROJECT_DIR$/cty/cty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cty1/cty1.iml" filepath="$PROJECT_DIR$/cty1/cty1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdbc/jdbc.iml" filepath="$PROJECT_DIR$/jdbc/jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/untitled/untitled.iml" filepath="$PROJECT_DIR$/untitled/untitled.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../内网通/xiaopu(1)/xiaopu(1).iml" filepath="$PROJECT_DIR$/../../内网通/xiaopu(1)/xiaopu(1).iml" />
     </modules>
   </component>
 </project>

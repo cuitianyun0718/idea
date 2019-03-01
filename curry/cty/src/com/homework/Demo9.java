@@ -19,12 +19,13 @@ public static void main(String[] args) {
         int bai=x/10/10%10;
 //        按要求进行判断
         if(x==ge*ge*ge+bai*bai*bai+shi*shi*shi){
-            sum++;
+            sum++;//统计个数
             System.out.println(x);
 
         }
     }
-    System.out.println(sum);
+    System.out.println("水仙花数有"+sum+"个");
+
 }
 
 }

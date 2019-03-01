@@ -13,7 +13,7 @@ public class Test {
         bf.price=10;
         bf.setLiliang("强");
         bf.shou();
-        System.out.println();
+        System.out.println(bf.age);
 //        创建一个对象
         SmallFish s=new SmallFish();
 

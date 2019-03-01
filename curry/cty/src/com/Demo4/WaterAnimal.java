@@ -5,7 +5,7 @@ package com.Demo4;
  * @Date:2019/1/15 8:28
  * @Description:不负自己
  */
-public class WaterAnimal {
+public class WaterAnimal  {
     public String TX="非常美";
     public int age;
     public double price;
