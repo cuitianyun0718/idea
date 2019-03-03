@@ -10,8 +10,8 @@ import java.util.List;
  * @Description:不负自己
  */
 public class JDBCUtil {
-    private static final String URL =
-            "jdbc:mysql://127.0.0.1:3306/user?useUnicode=true&characterEncoding=utf8";
+    private static final String URL ="jdbc:mysql://localhost/test";
+//            "jdbc:mysql://127.0.0.1:3306/user?useUnicode=true&characterEncoding=utf8";
     private static final String USER="root";
     private static final String PWD ="950718";
     static{
@@ -101,6 +101,30 @@ public class JDBCUtil {
             e.printStackTrace();
         }
         return lists;
+    }
+
+    public static <T> T QueryOne(String sql, RowMap<T> rm, Object... obj){
+        T t=null;
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs=null;
+        conn=getConnection();
+        try {
+            pstmt = conn.prepareStatement(sql);
+            if(obj!=null){
+                for(int i=0;i<obj.length;i++){
+                    pstmt.setObject(i+1,obj[i]);
+                }
+            }
+             rs = pstmt.executeQuery();
+            while(rs.next()){
+                 t = rm.Rowmapping(rs);
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return t;
     }
     public static <T> T queryOne(String sql, RowMap<T> rm, Object... obj){
         T t =null;

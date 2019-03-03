@@ -1,5 +1,7 @@
 package com.neuedu.pojo;
 
+import lombok.Data;
+
 import java.io.Reader;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -10,6 +12,7 @@ import java.util.Random;
  * @Date:2019/2/27 18:26
  * @Description:不负自己
  */
+@Data
 public class User {
 private Integer id;
 private String uname;

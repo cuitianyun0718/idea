@@ -16,7 +16,7 @@ import java.util.List;
 public class UserDaoImp1 implements IUserDao {
     @Override
     public List<User> getUsers() {
-        return JDBCUtil.executeQuery("select * from user",new RowMap<User>() {
+        return JDBCUtil.executeQuery("select * from user", new RowMap<User>() {
             @Override
             public User Rowmapping(ResultSet rs) {
                 User u=new User();
@@ -28,6 +28,43 @@ public class UserDaoImp1 implements IUserDao {
                     e.printStackTrace();
                 }
                 return u;
-            },null);
+            }
+        },null);
 
+}
+
+    @Override
+    public int insert(User user) {
+        return JDBCUtil.executeUpdate("insert into user(uname,password) values(?,?)",user.getUname(),user.getPassword());
+    }
+
+    @Override
+    public int delete(int id) {
+        return JDBCUtil.executeUpdate("delete from user where id=?",id);
+    }
+
+    @Override
+    public User getUserById(  int id) {
+        return JDBCUtil.QueryOne("select * from user where id=?", new RowMap<User>() {
+            @Override
+            public User Rowmapping(ResultSet rs) {
+                User user=new User();
+                try {
+
+                    user.setUname(rs.getString("uname"));
+                    user.setPassword(rs.getString("password"));
+                    user.setId(rs.getInt("id"));
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                return user;
+            }
+        }, id);
+    }
+
+    @Override
+    public int update(User user) {
+        return JDBCUtil.executeUpdate
+                ("update user set uname=?,password=? where id=?",user.getUname(),user.getPassword(),user.getId());
+    }
 }
